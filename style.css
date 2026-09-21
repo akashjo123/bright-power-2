@@ -582,6 +582,7 @@ header {
   align-items: center;
   justify-content: center;
   transition: background 0.3s;
+  color: #fff;
 }
 
 .social-icon:hover {
@@ -591,7 +592,6 @@ header {
 .social-icon svg {
   width: 16px;
   height: 16px;
-  fill: #fff;
 }
 
 .footer-links {
