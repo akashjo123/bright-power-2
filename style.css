@@ -648,6 +648,17 @@ header {
     flex-direction: column;
   }
   
+  .proj-cards {
+    flex-direction: column;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  
+  div[style*="padding: 0 60px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  
   .menu-toggle {
     display: block;
     z-index: 1001;
