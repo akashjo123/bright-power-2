@@ -622,6 +622,19 @@ header {
   color: #5c7482;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.menu-toggle svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--text-dark);
+}
+
 @media (max-width: 992px) {
   .process-grid, .projects-section, .contact-grid, .footer-grid, .project-details-container {
     grid-template-columns: 1fr;
@@ -634,9 +647,62 @@ header {
   .mini-projects {
     flex-direction: column;
   }
-  .nav-links {
+  
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+  
+  header .btn {
     display: none;
   }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    padding: 80px 40px;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+  
+  /* Mobile Spacing Overrides */
+  section, .inner-header, .projects-section, .subsidy-process-section, .project-details-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  
+  section[style*="padding: 100px"], .inner-header {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .hero {
+    min-height: 400px;
+    height: auto;
+  }
+
+  .hero-content {
+    padding: 40px 20px !important;
+  }
+  
+  header {
+    padding: 20px !important;
+  }
+  
+  .project-overview, .project-sidebar {
+    padding: 30px !important;
+  }
+
   .subsidy-row {
       flex-direction: column;
       gap: 30px;
